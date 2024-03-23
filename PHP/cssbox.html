@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1{
+            width:200px;
+            height: 200px;
+            background-color: aqua;
+            display: none;
+        }
+
+        .box2{
+            width:200px;
+            height: 200px;
+            background-color: red;
+            display: none;
+        }
+
+        .box3{
+            width:200px;
+            height: 200px;
+            background-color: green;
+            display: none;
+        }
+
+        .box4{
+            width:200px;
+            height: 200px;
+            background-color: blue;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <button class="In">Fade In</button>
+    <button class="Out">Fade Out</button>
+
+    <button class="toggle">Toggle</button>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+    <div class="box4"></div>
+    
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function(){
+            $('.In').click(function(){
+                $('.box1').fadeIn();
+            });
+
+            $('.In').click(function(){
+                $('.box2').fadeIn(" slow");
+            });
+
+            $('.In').click(function(){
+                $('.box3').fadeIn(2000);
+            });
+
+            $('.In').click(function(){
+                $('.box4').fadeIn(3000);
+            });
+
+            // fade out
+            $('.Out').click(function(){
+                $('.box1').fadeOut();
+            });
+
+            $('.Out').click(function(){
+                $('.box2').fadeOut("slow");
+            });
+
+            $('.Out').click(function(){
+                $('.box3').fadeOut(2000);
+            });
+
+            $('.Out').click(function(){
+                $('.box4').fadeOut(3000);
+            });
+
+
+            $('.toggle').click(function(){
+                $('.box1').fadeToggle();
+            })
+
+            $('.toggle').click(function(){
+                $('.box2').fadeToggle();
+            })
+
+            $('.toggle').click(function(){
+                $('.box3').fadeToggle();
+            })
+
+            $('.toggle').click(function(){
+                $('.box4').fadeToggle();
+            })
+        })
+    </script>
+</body>
+</html>
